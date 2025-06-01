@@ -1,15 +1,19 @@
 # Elegazza
+![Versão](https://img.shields.io/badge/version-1.0.0-blue)
 
 🛒 Elegazza - Loja Virtual de Eletrodomésticos
 Elegazza é uma loja online moderna com foco na venda de eletrodomésticos e móveis com visual atrativo, navegação intuitiva e informações claras para o consumidor final.
 
-📄 Descrição do Projeto
-Este é um site estático com HTML e CSS, ideal para demonstração de uma loja virtual. Ele contém seções como Início, Produtos, Ofertas, Contato e carrossel de imagens promocionais.
+## Descrição
 
-📁 Estrutura de Diretórios
-bash
-Copiar
-Editar
+Este é um site estático desenvolvido com HTML e CSS, ideal para demonstração de uma loja virtual moderna. O projeto inclui seções como Início, Produtos, Ofertas, Contato, além de um carrossel de imagens promocionais para melhorar a experiência do usuário.
+
+Além disso, o site utiliza PHP para integrar APIs, facilitando a transferência e processamento de dados dinâmicos.
+
+### Estrutura de Diretórios
+
+```markdown
+
 /elegazza
 │
 ├── gallery/            # Imagens do site (produtos, logo, etc)
@@ -17,13 +21,19 @@ Editar
 │   ├── exemplo1.jpg
 │   ├── exemplo2.jpg
 │   ├── ...
+├── produtos/            # produtos em geral (geladeira,fogão e etc.)
+│   ├── produto1.html
+│   ├── produto2.html
+│   ├── produto3.html
+│   ├── ...
 │
 ├── style.css           # Arquivo de estilos do site
 │
 ├── index.html          # Página principal do site
-│
-└── produto1.html       # Página de exemplo de produto (linkada nos produtos)
-✅ Funcionalidades
+├── ...
+```
+
+# Funcionalidades
 🔍 Campo de busca de produtos
 
 📷 Carrossel de imagens promocionais
@@ -36,16 +46,13 @@ Editar
 
 📞 Seção de contato no rodapé
 
-🧪 Como visualizar
+## Como visualizar
 Faça o download ou clone o repositório:
 
-bash
-Copiar
-Editar
 git clone https://github.com/seu-usuario/elegazza.git
 Abra o arquivo index.html diretamente no navegador.
 
-🚧 Melhorias Futuras (Sugestões)
+# Melhorias Futuras (Sugestões)
 Integração com back-end (PHP/MySQL) para produtos dinâmicos
 
 Sistema de carrinho de compras
@@ -56,12 +63,14 @@ Sistema de busca funcional
 
 Painel administrativo para cadastro de produtos
 
-📌 Tecnologias Utilizadas
+# Tecnologias Utilizadas
 HTML5
 
 CSS3
 
 PHP
+
+API REQUEST
 
 🧑‍💻 Desenvolvedor
 Nome: UrielDev
