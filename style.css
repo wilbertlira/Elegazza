@@ -333,3 +333,129 @@ footer {
   box-shadow: 0 4px 20px rgba(0, 117, 255, 0.3);
 }
 
+
+.form-frete {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-frete label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+}
+
+.form-frete .frete-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-frete input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.form-frete input[type="text"]:focus {
+  border-color: #3483fa;
+  outline: none;
+}
+
+.form-frete button {
+  padding: 12px 20px;
+  background-color: #3483fa;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-frete button:hover {
+  background-color: #2968c8;
+}
+
+
+/* Container do pagamento PIX */
+.pagamento-pix {
+  max-width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Título */
+.pagamento-pix h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #3483fa; /* azul Mercado Pago */
+}
+
+/* QR Code */
+.pagamento-pix img.qr-code {
+  max-width: 250px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(52, 131, 250, 0.5);
+}
+
+/* Caixa código "copia e cola" */
+.pagamento-pix .codigo-pix {
+  background: #f5f8ff;
+  border: 1px solid #3483fa;
+  border-radius: 8px;
+  padding: 12px 10px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #222;
+  word-break: break-all;
+  margin-bottom: 15px;
+  user-select: all;
+  cursor: text;
+}
+
+/* Botão copiar */
+.pagamento-pix button.copiar-btn {
+  background-color: #3483fa;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.pagamento-pix button.copiar-btn:hover {
+  background-color: #2968c8;
+}
+
+/* Botão fechar */
+.pagamento-pix button.fechar-btn {
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 20px;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.pagamento-pix button.fechar-btn:hover {
+  color: #3483fa;
+}
