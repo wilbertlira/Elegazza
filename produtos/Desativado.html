@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../gallery/logo.png" type="image/png" />
+  <title>Geladeira Frost Free - Elegazza</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1 class="logo">Elegazza</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Ofertas</a>
+      <a href="#">Contato</a>
+    </nav>
+    <form class="search-form" action="/buscar" method="GET">
+      <input type="text" name="q" placeholder="Pesquisar produtos...">
+      <button type="submit">🔍</button>
+    </form>
+  </div>
+</header>
+
+<main class="container" style="margin: 40px auto; display: flex; gap: 40px; flex-wrap: wrap;">
+  <!-- Galeria de imagens -->
+  <div style="flex: 1 1 300px;">
+    <img src="../gallery/geladeira.png" alt="Geladeira" style="width: 100%; border-radius: 12px;" />
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+      <img src="../gallery/geladeira.png" style="width: 60px; border: 1px solid #ccc; border-radius: 6px;" />
+      <img src="../gallery/geladeira.png" style="width: 60px; border: 1px solid #ccc; border-radius: 6px;" />
+    </div>
+  </div>
+
+  <!-- Detalhes do produto -->
+  <div style="flex: 2 1 400px;">
+    <h2>Geladeira Frost Free 400L Elegazza</h2>
+    <p style="color: #666;">Código: 12345678</p>
+    <div class="precos">
+      <span class="preco-antigo">R$ 3.499,00</span><br>
+      <span class="preco-novo">R$ 2.799,00</span>
+      <p style="margin-top: 10px;">em até 10x de R$ 279,90 sem juros</p>
+    </div>
+
+
+
+ <!-- Botão estilo Mercado Livre -->
+  <button style="
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #3483fa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  " onmouseover="this.style.backgroundColor='#2968c8'" onmouseout="this.style.backgroundColor='#3483fa'">
+    Comprar agora
+  </button>
+
+
+
+
+  </div>
+
+  <!-- Calcular Frete abaixo -->
+<form class="form-frete" id="frete-form">
+  <label for="cep">Calcular frete:</label>
+  <div class="frete-input-group">
+    <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" />
+    <button type="submit">OK</button>
+  </div>
+</form>
+<div id="resultado-frete" style="margin-top: 10px; font-weight: bold;"></div>
+
+<script>
+document.getElementById('frete-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const cep = document.getElementById('cep').value.replace(/\D/g, '');
+  const resultado = document.getElementById('resultado-frete');
+
+  if (cep.length !== 8) {
+    resultado.innerText = 'CEP inválido.';
+    return;
+  }
+
+  resultado.innerText = 'Calculando...';
+
+  // Usando a API pública ViaCEP só para descobrir o estado do CEP
+  fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.erro) {
+        resultado.innerText = 'CEP não encontrado.';
+        return;
+      }
+
+      const uf = data.uf;
+      let valorFrete;
+
+      switch (uf) {
+        case 'SP':
+        case 'RJ':
+        case 'MG':
+          valorFrete = 'R$ 29,90';
+          break;
+        case 'PR':
+        case 'SC':
+        case 'RS':
+          valorFrete = 'R$ 39,90';
+          break;
+        case 'BA':
+        case 'PE':
+        case 'CE':
+          valorFrete = 'R$ 49,90';
+          break;
+        default:
+          valorFrete = 'R$ 59,90';
+      }
+
+      resultado.innerText = `Frete estimado para ${data.localidade} - ${uf}: ${valorFrete}`;
+    })
+    .catch(() => {
+      resultado.innerText = 'Erro ao calcular o frete.';
+    });
+});
+</script>
+
+
+
+
+
+  <!-- Descrição detalhada -->
+  <section style="flex: 1 1 100%; margin-top: 40px;">
+    <h3>Descrição do Produto</h3>
+    <p style="margin-top: 10px; line-height: 1.6;">
+      A Geladeira Frost Free Elegazza oferece 400 litros de capacidade, sistema frost free que evita acúmulo de gelo, controle de temperatura eletrônico, compartimento extra frio e design moderno em inox.
+    </p>
+  </section>
+
+  <!-- Comentários e Avaliações -->
+  <section style="flex: 1 1 100%; margin-top: 40px;">
+    <h3>Comentários dos clientes</h3>
+    <p><strong>Maria J.:</strong> Produto excelente! Entrega rápida e embalagem impecável.</p>
+    <p><strong>João P.:</strong> A geladeira é linda e muito silenciosa.</p>
+  </section>
+
+  <!-- Produtos recomendados -->
+  <section style="flex: 1 1 100%; margin-top: 40px;">
+    <h3>Você também pode gostar</h3>
+    <div class="produtos">
+      <div class="produto">
+        <img src="../gallery/geladeira.png" alt="Produto 1">
+        <h3>Geladeira Inox 350L</h3>
+        <span class="preco-novo">R$ 2.499,00</span>
+        <button>Ver produto</button>
+      </div>
+      <div class="produto">
+        <img src="../gallery/geladeira.png" alt="Produto 2">
+        <h3>Mini Refrigerador 120L</h3>
+        <span class="preco-novo">R$ 1.299,00</span>
+        <button>Ver produto</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <p>Email: contato@empresa.com</p>
+      <p>Telefone: (11) 99999-9999</p>
+    </div>
+    <div class="footer-col">
+      <h4>Endereço</h4>
+      <p>Rua Exemplo, 123</p>
+      <p>São Paulo - SP</p>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <p>CNPJ: 12.345.678/0001-99</p>
+      <p>&copy; 2025 Elegazza</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
