@@ -1,7 +1,8 @@
 <?php
-
+///Ultima Atualização 
+// 04/05/23
 // Configurações do Mercado Pago
-$accessToken = 'APP_USR-4443887924560844-123119-afd0f30deae9c537b10e7a14727a8e86-2189208850'; // Substitua pelo seu Access Token válido
+$accessToken = ''; // token mp
 
 header('Content-Type: application/json');
 
@@ -101,3 +102,4 @@ $pixData = [
 
 echo json_encode($pixData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 ?>
+
