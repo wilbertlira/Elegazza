@@ -72,8 +72,7 @@ PHP
 
 API REQUEST
 
-🧑‍💻 Desenvolvedor
-Nome: Wilbert Lira
+Desenvolvido por: Wilbert Lira
 
 Contato: canalurielparcerias@gmail.com
 
