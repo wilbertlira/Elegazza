@@ -34,25 +34,25 @@ Além disso, o site utiliza PHP para integrar APIs, facilitando a transferência
 ```
 
 # Funcionalidades
-🔍 Campo de busca de produtos
+ Campo de busca de produtos
 
-📷 Carrossel de imagens promocionais
+ Carrossel de imagens promocionais
 
-🛍️ Listagem de produtos com preços
+ Listagem de produtos com preços
 
-💰 Seção de ofertas com destaque para preço antigo e novo
+ Seção de ofertas com destaque para preço antigo e novo
 
-📱 Responsivo (adaptado para dispositivos móveis)
+ Responsivo (adaptado para dispositivos móveis)
 
-📞 Seção de contato no rodapé
+ Seção de contato no rodapé
 
 ## Como visualizar
 Faça o download ou clone o repositório:
 
-git clone https://github.com/seu-usuario/elegazza.git
+git clone https://github.com/wilbertlira/elegazza.git
 Abra o arquivo index.html diretamente no navegador.
 
-# Melhorias Futuras (Sugestões)
+# Melhorias Futuras
 Integração com back-end (PHP/MySQL) para produtos dinâmicos
 
 Sistema de carrinho de compras
@@ -73,8 +73,8 @@ PHP
 API REQUEST
 
 🧑‍💻 Desenvolvedor
-Nome: UrielDev
+Nome: Wilbert Lira
 
 Contato: canalurielparcerias@gmail.com
 
-GitHub: github.com/Uriel-Dev
+GitHub: github.com/wilbertlira
